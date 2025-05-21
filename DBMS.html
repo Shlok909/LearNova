@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearNova - Educational Resources</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #00b8a9;
+            color: white;
+            padding: 1rem 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Page Title */
+        .page-title {
+            background-color: #00b8a9;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00b8a9;
+            color: #333;
+        }
+        
+        /* Resource Lists */
+        .resource-list {
+            list-style-type: none;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+        }
+        
+        .resource-list li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .resource-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .resource-list li a {
+            color: #444;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .resource-list li a:hover {
+            color: #00b8a9;
+        }
+        
+        .resource-list li i {
+            margin-right: 10px;
+            color: #00b8a9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">LearNova</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="container">
+            <h1>Data Structure</h1>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="two-column">
+            <!-- YouTube Videos Column -->
+            <div class="column content-section">
+                <h2 class="section-title">YT Links</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href= "https://youtu.be/YRnjGeQbsHQ?si=Yx00NuCfJHqN4-e3"><i class="fab fa-youtube"></i> link 1</a></li>
+                    </li>
+                    <li>
+                         <a href= "https://youtu.be/jzuzxEFoiss?si=JO-X39h39MWq2v9I"><i class="fab fa-youtube"></i> link 2</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/dl00fOOYLOM?si=kyrAI2Q8i_v62W6a"><i class="fab fa-youtube"></i> link 3</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/J0OvDNmAWNw?si=I-cJuHjL6gI-5Zjv"><i class="fab fa-youtube"></i> link 4</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/viJzDvom2Yc?si=0pycMTlnkqOtY8al"><i class="fab fa-youtube"></i> link 5</a></li>
+                    </li>
+                    <li>
+                         <a href= "https://youtube.com/playlist?list=PLYwpaL_SFmcBU4HS74xGTK1cAFbY0rdVY&si=gnYk_t18icBGYPj-"><i class="fab fa-youtube"></i> link 6</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtube.com/playlist?list=PLqleLpAMfxGDEClbx9ymd-KWDDJrx_W8C&si=MS46cOJ9IeFcT4Cp"><i class="fab fa-youtube"></i> link 7</a></li>
+                    </li>
+                    <li>
+                         <a href= "https://youtube.com/playlist?list=PLBvTTYUOHEmcbkKi6G-7tg0sUnQwujApt&si=qVYZKuN3T42Lw_-o"><i class="fab fa-youtube"></i> link 8</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/ptlIJiIByMc?si=UeMYRSvjUQDW0PrY"><i class="fab fa-youtube"></i> UNIT 1 </a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/jRReZoQi1hw?si=QwQbFJAMZqsu9MEX"><i class="fab fa-youtube"></i> UNIT 2</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/VAd8Audkxro?si=7dZWox_h3kK5kpfa"><i class="fab fa-youtube"></i> UNIT 3</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/0Skq_YqrHjg?si=ZxHTvNHy4f21ol7t"><i class="fab fa-youtube"></i> UNIT 4</a></li>
+                    </li>
+                    <li>
+                        <a href= "https://youtu.be/oR6IXFrJBEk?si=uNYjX4mp-M2LD08h"><i class="fab fa-youtube"></i> UNIT 5</a></li>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- PYQ Column -->
+            <div class="column content-section">
+                <h2 class="section-title">Previous Year Questions (PYQs)</h2>
+                <ul class="resource-list">
+                    <!-- <li>
+                        <a href=><i class="fas fa-file-pdf"></i></a>
+                    </li> -->
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-data-base-management-system-2226-summer-2019.pdf"><i class="fas fa-file-pdf"></i> data base management system summer 2019 </a></li>
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-database-management-system-paper-2-summer-2018.pdf"><i class="fas fa-file-pdf"></i>database management system summer 2018</a></li>
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-database-management-system-summer-2018.pdf"><i class="fas fa-file-pdf"></i> database management system summer 2018_1</a></li>
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-database-management-system-winter-2018.pdf"><i class="fas fa-file-pdf"></i> database management system summer 2018_2</a></li>
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-database-management-system-summer-2017.pdf"><i class="fas fa-file-pdf"></i> database management system summer 2018_3</a></li>
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-database-management-system-winter-2017.pdf"><i class="fas fa-file-pdf"></i> database management system summer 2017</a></li>
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-database-management-system-summer-2016.pdf"><i class="fas fa-file-pdf"></i> database management system summer 2016</a></li>
+                    <li> <a href= "https://www.rtmnuonline.com/papers/bca-3-sem-database-management-system-winter-2016.pdf"><i class="fas fa-file-pdf"></i> database management system summer 2016_1</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LearNova. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

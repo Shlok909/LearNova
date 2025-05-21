@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearNova - Educational Resources</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #00b8a9;
+            color: white;
+            padding: 1rem 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Page Title */
+        .page-title {
+            background-color: #00b8a9;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00b8a9;
+            color: #333;
+        }
+        
+        /* Resource Lists */
+        .resource-list {
+            list-style-type: none;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+        }
+        
+        .resource-list li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .resource-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .resource-list li a {
+            color: #444;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .resource-list li a:hover {
+            color: #00b8a9;
+        }
+        
+        .resource-list li i {
+            margin-right: 10px;
+            color: #00b8a9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">LearNova</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="container">
+            <h1>Data Structure</h1>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="two-column">
+            <!-- YouTube Videos Column -->
+            <div class="column content-section">
+                <h2 class="section-title">YT Links</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://youtube.com/playlist?list=PL724pdDXl9Q0yZUx9bkqarHO584JOsKfE&si=Tt7SUIIwwmYm2f_a"><i class="fab fa-youtube"></i> Link 1 !!</i></a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/playlist?list=PLmRclvVt5DtlXMvqL0zDqQu9Cvy6rsmd4&si=DN_whLhVx31_Pmuv"><i class="fab fa-youtube"></i> Link 2 !!</a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/playlist?list=PLqleLpAMfxGDq9Ehl8FUstcRrCRQPQO7n&si=ltxcBEEYDa6UdO3K"><i class="fab fa-youtube"></i>Link 3 !!</a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/stqrJl3pIaI?si=eYa1p3seFIDjO0RD"><i class="fab fa-youtube"></i>Link 4 !!</a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/OQ0En1dQ3zI?si=pXqWcqDoKGqFc3AZ"><i class="fab fa-youtube"></i>Link 5 !!</a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/mlIUKyZIUUU?si=N-C1uF9w3rp0VbFv"><i class="fab fa-youtube"></i>Link 6 !!</a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/playlist?list=PLxCzCOWd7aiF6yRNI5OHQsnUJQfl7Geqj&si=jV9OsM6ZAyxfe1HY"><i class="fab fa-youtube"></i>Link 7 !!</a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/9roJTTghZJI?si=yi4iSn53TeDTIBii"><i class="fab fa-youtube"></i>Link 8 !!</a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/oi1ffu6lBXE?si=ywnaLOR6HpE55VJn"><i class="fab fa-youtube"></i>Link 9 !!</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#"><i class="fab fa-youtube"></i> Dynamic Programming</a>
+                    </li> -->
+                </ul>
+            </div>
+            
+            <!-- PYQ Column -->
+            <div class="column content-section">
+                <h2 class="section-title">Previous Year Questions (PYQs)</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programming-in-cpp-summer-2017.pdf"><i class="fas fa-file-pdf"></i>programming in c++ summer 2017</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programming-in-cpp-2018.pdf"><i class="fas fa-file-pdf"></i> programming in c++ 2018</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programming-in-cpp-paper-1-summer-2018.pdf"><i class="fas fa-file-pdf"></i> programming in c++ 2018_1</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programming-in-cpp-winter-2018.pdf"><i class="fas fa-file-pdf"></i>programming in c++ winter 2018_2</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programming-in-cpp-winter-2017.pdf"><i class="fas fa-file-pdf"></i> programming in c++ winter 2017_1</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programing-in-cpp-summer-2016.pdf"><i class="fas fa-file-pdf"></i> programing in c++ summer 2016</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programming-in-cpp-winter-2016.pdf"><i class="fas fa-file-pdf"></i>programming in c++ winter 2016_1</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rtmnuonline.com/papers/bca-2-sem-programming-in-cpp-winter-2015.pdf"><i class="fas fa-file-pdf"></i>programming in c++ winter 2015</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LearNova. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
