@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - LearnNova</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #20b2aa 0%, #1a9d96 100%);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(32, 178, 170, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 1px solid rgba(32, 178, 170, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #20b2aa, #1a9d96);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover:before {
+            transform: scaleX(1);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(32, 178, 170, 0.2);
+        }
+
+        .icon {
+            font-size: 3rem;
+            text-align: center;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .course-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .course-duration {
+            color: #20b2aa;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .semester-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .semester-btn {
+            background: linear-gradient(135deg, #20b2aa 0%, #1a9d96 100%);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .semester-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(32, 178, 170, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .main-container {
+                padding: 2rem 1rem;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .course-card {
+                padding: 2rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .semester-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-card {
+                padding: 1.5rem;
+            }
+
+            .course-name {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">LearnNova</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link active">Courses</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <h1 class="page-title">Select Your Course</h1>
+        <p class="page-subtitle">Choose your program to view semester-wise curriculum</p>
+        
+        <div class="course-grid">
+            <div class="course-card" onclick="showCourse('btech')">
+                <div class="icon">🎓</div>
+                <h3 class="course-name">B.C.A(Bachelors of Computer Application)</h3>
+                <p class="course-duration">4 Years • 8 Semesters</p>
+                <div class="semester-grid">
+                    <div class="semester-btn">Sem 1</div>
+                    <div class="semester-btn"><a href="bca.html" class="semester-btn">Sem 2</a></div>
+                    <div class="semester-btn">Sem 3</div>
+                    <div class="semester-btn">Sem 4</div>
+                    <div class="semester-btn">Sem 5</div>
+                    <div class="semester-btn">Sem 6</div>
+                    <div class="semester-btn">Sem 7</div>
+                    <div class="semester-btn">Sem 8</div>
+                </div>
+            </div>
+
+            <!-- <div class="course-card" onclick="showCourse('mtech')">
+                <div class="icon">🎯</div>
+                <h3 class="course-name">M.Tech (Computer Science)</h3>
+                <p class="course-duration">2 Years • 4 Semesters</p>
+                <div class="semester-grid">
+                    <div class="semester-btn">Sem 1</div>
+                    <div class="semester-btn">Sem 2</div>
+                    <div class="semester-btn">Sem 3</div>
+                    <div class="semester-btn">Sem 4</div>
+                </div>
+            </div>
+
+            <div class="course-card" onclick="showCourse('mca')">
+                <div class="icon">💼</div>
+                <h3 class="course-name">MCA (Master of Computer Applications)</h3>
+                <p class="course-duration">3 Years • 6 Semesters</p>
+                <div class="semester-grid">
+                    <div class="semester-btn">Sem 1</div>
+                    <div class="semester-btn">Sem 2</div>
+                    <div class="semester-btn">Sem 3</div>
+                    <div class="semester-btn">Sem 4</div>
+                    <div class="semester-btn">Sem 5</div>
+                    <div class="semester-btn">Sem 6</div>
+                </div>
+            </div>
+
+            <div class="course-card" onclick="showCourse('bca')">
+                <div class="icon">📚</div>
+                <h3 class="course-name">BCA (Bachelor of Computer Applications)</h3>
+                <p class="course-duration">3 Years • 6 Semesters</p>
+                <div class="semester-grid">
+                    <div class="semester-btn">Sem 1</div>
+                    <div class="semester-btn">Sem 2</div>
+                    <div class="semester-btn">Sem 3</div>
+                    <div class="semester-btn">Sem 4</div>
+                    <div class="semester-btn">Sem 5</div>
+                    <div class="semester-btn">Sem 6</div>
+                </div>
+            </div>
+
+            <div class="course-card" onclick="showCourse('diploma')">
+                <div class="icon">🔧</div>
+                <h3 class="course-name">Diploma (Computer Engineering)</h3>
+                <p class="course-duration">3 Years • 6 Semesters</p>
+                <div class="semester-grid">
+                    <div class="semester-btn">Sem 1</div>
+                    <div class="semester-btn">Sem 2</div>
+                    <div class="semester-btn">Sem 3</div>
+                    <div class="semester-btn">Sem 4</div>
+                    <div class="semester-btn">Sem 5</div>
+                    <div class="semester-btn">Sem 6</div>
+                </div>
+            </div>
+
+            <div class="course-card" onclick="showCourse('phd')">
+                <div class="icon">🏆</div>
+                <h3 class="course-name">Ph.D (Computer Science)</h3>
+                <p class="course-duration">3-5 Years • Research Based</p>
+                <div class="semester-grid">
+                    <div class="semester-btn">Year 1</div>
+                    <div class="semester-btn">Year 2</div>
+                    <div class="semester-btn">Year 3</div>
+                    <div class="semester-btn">Thesis</div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+    <script>
+        function showCourse(courseKey) {
+            // Add click animation
+            event.currentTarget.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                event.currentTarget.style.transform = 'scale(1)';
+            }, 150);
+            
+            // Course selection logic
+            // console.log(`Selected course: ${courseKey}`);
+            // alert(`You selected ${courseKey.toUpperCase()}! This would navigate to the course details page.`);
+            
+            // Here you can add navigation logic to course details page
+            // For example: window.location.href = `course-details.html?course=${courseKey}`;
+        }
+
+        // Add smooth animations for semester buttons
+        document.querySelectorAll('.semester-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent triggering parent card click
+                
+                // Animation effect
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 100);
+                
+                // Semester selection logic
+                // const semesterName = this.textContent;
+                // const courseName = this.closest('.course-card').querySelector('.course-name').textContent;
+                // console.log(`Selected: ${courseName} - ${semesterName}`);
+                // alert(`You selected ${semesterName} of ${courseName}!`);
+            });
+        });
+
+        // Add hover effects
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
